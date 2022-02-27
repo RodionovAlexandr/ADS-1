@@ -9,7 +9,7 @@ uint64_t count, pr;
 pr = 2;
 count = 1;
 while (true) {
-if (n == count) {
+if (value == count) {
 return pr;
 }
 pr++;
@@ -19,12 +19,11 @@ if (!checkPrime(pr)) count++;
 
 uint64_t nPrime(uint64_t n) {
 // вставьте код функции
-if (value == 1) return 2;
-if (value == 2) return 3;
-if (checkPrime(value) == 1) value += 1;
-for (int i = value; i <= 10000; i++)
-if (checkPrime(i)) {
-return i;
+if (n == 1) return 2;
+if (n == 2) return 3;
+if (checkPrime(n) == 1) value += 1;
+for (int i = n; i <= 10000; i++) {
+if (checkPrime(i)) return i;
 }
 }
 
@@ -33,9 +32,8 @@ uint64_t nextPrime(uint64_t value) {
 if (value == 1) return 2;
 if (value == 2) return 3;
 if (checkPrime(value) == 1) value += 1;
-for (int i = value; i <= 10000; i++)
-if (checkPrime(i)) {
-return i;
+for (int i = value; i <= 10000; i++) {
+if (checkPrime(i)) return i;
 }
 }
 
