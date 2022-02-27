@@ -23,7 +23,7 @@ if (n == count) {
 return pr;
 }
 pr++;
-if (checkPrime(pr)) count++;
+if (!checkPrime(pr)) count++;
 }
 }
 
