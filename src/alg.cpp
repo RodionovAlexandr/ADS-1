@@ -6,11 +6,13 @@
 bool checkPrime(uint64_t value) {
 // вставьте код функции
 if (value > 1) {
-for (int j = 2; j < value; j++)
+for (int j = 2; j < value; j++) {
 if (value % j == 0)
 return false;
-} else return true;
-
+} 
+else 
+return true;
+}
 }
 
 uint64_t nPrime(uint64_t n) {
