@@ -8,8 +8,6 @@ if (value > 1)
 {
 for (int i = 2; i < value; i++)
 if (value % i == 0)
-return false;
-
 return true;
 } else {
 return false;
@@ -17,14 +15,15 @@ return false;
 }
 
 uint64_t nPrime(uint64_t n) {
-int count = 0;
-if (n == 1) return 2;
-for (int i = 3; i <= 10000; i += 2) {
-if (checkPrime(i)) {
-count++;
-if (count == (n - 1))
-return i;
+uint64_t count, pr;
+pr = 2;
+count = 1;
+while (true) {
+if (n == count) {
+return pr;
 }
+pr++;
+if (checkPrime(pr)) count++;
 }
 }
 
