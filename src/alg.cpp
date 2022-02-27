@@ -4,45 +4,45 @@
 
 
 bool checkPrime(uint64_t value) {
-uint64_t i, sqvalue;
-  sqvalue = value*value;
-  for (int i = 2; i <= sqvalue; i++) {
-  if (value % i == 0) 
-  return false; 
-  }
-  return true; 
+if (value > 1)
+{
+for (int i = 2; i < value; i++)
+if (value % i == 0)
+return false;
+
+return true;
+} else {
+return false;
+}
 }
 
 uint64_t nPrime(uint64_t n) {
-  uint64_t count, np;
-  np = 2;
-  count = 1;
-  while (true) {
-  if (n == count) {
-  return np;
-  }
-  np++;
-  if (checkPrime(np)) count++;
-  }
-  }
+int count = 0;
+if (n == 1) return 2;
+for (int i = 3; i <= 10000; i += 2) {
+if (checkPrime(i)) {
+count++;
+if (count == (n - 1))
+return i;
+}
+}
+}
 
 uint64_t nextPrime(uint64_t value) {
-uint64_t np;
-  np = value;
-  while (true) {
-  np++;
-  if (checkPrime(np)) return np;
-  }
-  }
+if (value == 1) return 2;
+if (value == 2) return 3;
+if (checkPrime(value) == 1) value += 1;
+for (int i = value; i <= 10000; i++)
+if (checkPrime(i)) {
+return i;
+}
+}
 
 uint64_t sumPrime(uint64_t hbound) {
-  if (hbound == 1 || hbound == 0) return 0;
-  hbound--;
-  if (checkPrime(hbound)) {
-  return (hbound + sumPrime(hbound));
-  }
-  else 
-  if (!checkPrime(hbound)) {
-  return sumPrime(hbound);
-  }
+uint64_t allin= 0;
+for(uint64_t i=1; i < hbound; i++)
+if (checkPrime(i) == 1) {
+allin = allin + i;
+}
+return allin;
 }
