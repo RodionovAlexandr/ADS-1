@@ -5,25 +5,27 @@
 
 bool checkPrime(uint64_t value) {
 // вставьте код функции
+if (value > 1)
+{
+for (int j = 2; j < value; j++)
+if (value % j == 0)
+return false;
+} else {
+return true;
+}
+} 
+
+uint64_t nPrime(uint64_t n) {
+// вставьте код функции
 uint64_t count, pr;
 pr = 2;
 count = 1;
 while (true) {
-if (value == count) {
+if (n == count) {
 return pr;
 }
 pr++;
-if (!checkPrime(pr)) count++;
-}  
-}
-
-uint64_t nPrime(uint64_t n) {
-// вставьте код функции
-if (n == 1) return 2;
-if (n == 2) return 3;
-if (checkPrime(n) == 1) value += 1;
-for (int i = n; i <= 10000; i++) {
-if (checkPrime(i)) return i;
+if (checkPrime(pr)) count++;
 }
 }
 
