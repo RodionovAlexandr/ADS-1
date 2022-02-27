@@ -4,8 +4,9 @@
 
 
 bool checkPrime(uint64_t value) {
-uint64_t i;
-  for (int i = 2; i<=sqrt(value); i++){
+uint64_t i,sqvalue;
+  sqvalue = value*value;
+  for (int i = 2; i<=sqvalue; i++){
    if (value % i == 0) 
      return false; 
   }
@@ -20,7 +21,7 @@ uint64_t nPrime(uint64_t n) {
   if (n == count) {
     return np;
     }
-  pr++;
+  np++;
   if (checkPrime(np)) count++;
   }
 }
