@@ -9,8 +9,8 @@ if (value > 1) {
 for (int j = 2; j < value; j++) {
 if (value % j == 0)
 return false;
-} 
-else 
+}
+else
 return true;
 }
 }
