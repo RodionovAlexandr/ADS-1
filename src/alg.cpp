@@ -38,8 +38,8 @@ int i = 0;
             i += 1;
             return value;
         }
-        return 0;
     }
+    return 0;
 }
 
 uint64_t sumPrime(uint64_t hbound) {
