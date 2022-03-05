@@ -7,20 +7,20 @@ bool checkPrime(uint64_t value) {
 // вставьте код функции
 for (int i = 2; i <= value / 2; i++) {
         if (value % i == 0) {
-            return false;
-            
+            return false;    
         }
-        else return true;
+        else
+                return true;
     }
 }
 
 uint64_t nPrime(uint64_t n) {
 // вставьте код функции
-uint64_t value,num;
+uint64_t value, num;
     value = 0;
     num = 0;
     while (num < n) {
-        value ++;
+        value++;
         if (checkPrime(value) == true) {
             num++;
         }
@@ -43,7 +43,7 @@ int i = 0;
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
   int sum = 0;
-    while (hbound > 1){
+    while (hbound > 1) {
         hbound -= 1;
         if (checkPrime(hbound) == true) {
             sum += hbound;
