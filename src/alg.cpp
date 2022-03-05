@@ -12,6 +12,7 @@ for (int i = 2; i <= value / 2; i++) {
                 return true;
         }
     }
+        return true;
 }
 
 uint64_t nPrime(uint64_t n) {
@@ -37,6 +38,7 @@ int i = 0;
             i += 1;
             return value;
         }
+        return 0;
     }
 }
 
