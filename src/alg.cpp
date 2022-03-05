@@ -7,9 +7,8 @@ bool checkPrime(uint64_t value) {
 // вставьте код функции
 for (int i = 2; i <= value / 2; i++) {
         if (value % i == 0) {
-            return false;    
-        }
-        else
+            return false;
+        } else
                 return true;
     }
 }
