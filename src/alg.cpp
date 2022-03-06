@@ -44,10 +44,9 @@ int i = 0;
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
   int sum = 0;
-    while (hbound > 0) {
-        hbound -= 1;
-        if (checkPrime(hbound) == true) {
-            sum += hbound;
+    for (uint64_t slag = 1; slag < hbound; slag++) {
+        if (checkPrime(slag) == true) {
+            sum += slag;
         }
     }
     return sum;
