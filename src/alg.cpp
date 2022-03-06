@@ -43,7 +43,7 @@ int i = 0;
 
 uint64_t sumPrime(uint64_t hbound) {
 // вставьте код функции
-  int sum = 0;
+  unsigned long long sum = 0;
     for (uint64_t slag = 1; slag < hbound; slag++) {
         if (checkPrime(slag) == true) {
             sum += slag;
